@@ -8,9 +8,36 @@
     padding: 8px 14px;
     border: none;
     text-decoration: none;
-    background: $white;
+    background: $White;
     transition: 0.3s;
     font-size: 16px;
     border-radius: 4px;
-    color: $blackLight;
+}
+.dark-theme {
+    background-color: $DarkThemeBgd;
+    color: $White;
+}
+.default-theme {
+    background-color: $DefaultTheme;
+    color: $White;
+}
+.red-theme {
+    background-color: $RedTheme;
+    color: $White;
+}
+.green-theme {
+    background-color: $GreenTheme;
+    color: $White;
+}
+.purple-theme {
+    background-color: $PurpleTheme;
+    color: $White;
+    &:checked {
+        background-color: $PurpleTheme;
+        color: $White;
+    }
+}
+.orange-theme {
+    background-color: $OrangeTheme;
+    color: $White;
 }

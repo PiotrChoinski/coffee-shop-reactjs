@@ -3,7 +3,6 @@
 .contact-container {
     h1 {
         text-align: center;
-        color: $blackLight;
         font-size: 50px;
     }
     .contact {
@@ -20,6 +19,15 @@
             box-shadow: 10px 10px 33px -24px rgba(66, 68, 90, 1);
             display: flex;
             flex-direction: column;
+            background-color: $White;
+            margin-top: 25px;
+            transition: 0.3s;
+            color: black;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $BtnContactHover;
+            }
             & img {
                 width: 200px;
                 margin: auto;

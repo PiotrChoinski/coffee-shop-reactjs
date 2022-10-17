@@ -10,8 +10,8 @@ const Header = (props) => {
             <div className='header'>
                 <h1>{props.title}</h1>
                 {isAdmin
-                ? <Link className='btn' to='/'>Home</Link>
-                : <Link className='btn btn--admin' to='/admin'>Admin panel</Link>}
+                ? <Link className='btn' to='/'><img src='home.png' alt='home icon'/></Link>
+                : <Link className='btn btn--admin' to='/admin'><img src='settings.png' alt='settings icon'/></Link>}
             </div>
         </div>
     )

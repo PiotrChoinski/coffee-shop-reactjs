@@ -1,12 +1,20 @@
+@import './../../assets/Colors.scss';
+
 .panel-container {
     padding: 20px;
     font-size: 20px;
-
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .panel {
+        min-width: 80%;
+        margin: auto;
+    }
     ul li {
         font-size: 14px;
         display: flex;
         align-items: center;
-        width: 500px;
         justify-content: space-between;
     }
     p {
@@ -16,9 +24,61 @@
         width: 200px;
         height: 25px;
         margin-right: 1px;
+        border-radius: 8px;
+        border: 1px solid grey;
+        padding-left: 8px;
+        outline: 1px solid transparent;
+        transition: 0.3s;
+        &:focus {
+            outline: 1px solid rgb(0, 116, 224);
+        }
     }
     input[type='checkbox'] {
         width: 30px;
         height: 30px;
+        outline: none;
+        border-radius: 50%;
+        border: 1px solid grey;
+        outline: none;
+        cursor: pointer;
+    }
+    .colors {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 200px;
+    }
+    .color {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &--default {
+            background-color: $DefaultTheme;
+        }
+        &--red {
+            background-color: $RedTheme;
+        }
+        &--green {
+            background-color: $GreenTheme;
+        }
+        &--purple {
+            background-color: $PurpleTheme;
+        }
+        &--orange {
+            background-color: $OrangeTheme;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .panel-container {
+        .contact-container {
+            grid-template-columns: 1fr;
+            .panel {
+                min-width: 100%;
+            }
+        }
     }
 }

@@ -9,11 +9,29 @@ const App = () => {
   const { Provider } = Context;
   const [sliderState, setSliderState] = useState(true);
   const [sliderText, setSliderText] = useState('Slider');
-  const [mainColor, setMainColor] = useState('#fff');
+
+  const [emailState, setEmailState] = useState(true);
+  const [emailText, setEmailText] = useState('example@example.com');
+
+  const [phoneState, setPhoneState] = useState(true);
+  const [phoneText, setPhoneText] = useState('123456789');
+
+  const [adressState, setAdressState] = useState(true);
+  const [adressText, setAdressText] = useState('Example 4/20');
+
+  const [darkTheme, setDarkTheme] = useState(false);
 
   return (
-    <div className='App'>
-      <Provider value={{ sliderState, setSliderState, sliderText, setSliderText }}>
+    <div className={darkTheme ? 'App dark-theme' : 'App'}>
+      <Provider value={{ sliderState, setSliderState, 
+                         sliderText, setSliderText,
+                         emailState, setEmailState, 
+                         emailText, setEmailText, 
+                         phoneState, setPhoneState, 
+                         phoneText, setPhoneText, 
+                         adressState, setAdressState, 
+                         adressText, setAdressText,
+                         darkTheme, setDarkTheme }}>
         <BrowserRouter>
           <Routes>
             <Route path='*' element={<Website />} />

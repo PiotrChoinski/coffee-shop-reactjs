@@ -3,21 +3,28 @@
 .header-container {
     .header {
         padding: 10px;
-        background-color: $blackLight;
+        background-color: $LightBlack;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
     h1 {
         font-size: 16px;
-        color: $white;
+        color: $White;
     }
 
     .btn {
+        & img {
+            height: 25px;
+            margin-top: 2px;
+        }
         &--admin {
-            background-color: $btnAdmin;
+            background-color: $BtnAdmin;
         }
         &:hover {
+            background-color: $LightGrey;
+        }
+        &--admin:hover {
             background-color: $BtnAdminHover;
         }
     }

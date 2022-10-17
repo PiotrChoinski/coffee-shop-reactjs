@@ -1,0 +1,24 @@
+.panel-container {
+    padding: 20px;
+    font-size: 20px;
+
+    ul li {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        width: 500px;
+        justify-content: space-between;
+    }
+    p {
+        margin-right: 10px;
+    }
+    input {
+        width: 200px;
+        height: 25px;
+        margin-right: 1px;
+    }
+    input[type='checkbox'] {
+        width: 30px;
+        height: 30px;
+    }
+}

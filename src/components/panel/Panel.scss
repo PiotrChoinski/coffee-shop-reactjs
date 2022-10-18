@@ -20,27 +20,34 @@
     p {
         margin-right: 10px;
     }
-    input {
-        width: 200px;
+    .toggler-wrapper input[type="checkbox"] {
+        display: none;
+    } 
+    .toggler-wrapper .toggler-slider {
+        background-color: #ccc;
+        border-radius: 100px;
+        top: 0;
+        left: 0;
+        width: 50px;
         height: 25px;
-        margin-right: 1px;
-        border-radius: 8px;
-        border: 1px solid grey;
-        padding-left: 8px;
-        outline: 1px solid transparent;
-        transition: 0.3s;
-        &:focus {
-            outline: 1px solid rgb(0, 116, 224);
-        }
+        -webkit-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }  
+    .toggler-wrapper .toggler-knob {
+        position: relative;
+        -webkit-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }      
+    .toggler-wrapper.style-1 input[type="checkbox"]:checked+.toggler-slider .toggler-knob {
+        left: calc(100% - 19px - 3px);
     }
-    input[type='checkbox'] {
-        width: 30px;
-        height: 30px;
-        outline: none;
+    .toggler-wrapper.style-1 .toggler-knob {
+        width: calc(25px - 6px);
+        height: calc(25px - 6px);
         border-radius: 50%;
-        border: 1px solid grey;
-        outline: none;
-        cursor: pointer;
+        left: 3px;
+        top: 3px;
+        background-color: #fff;
     }
     .colors {
         display: flex;
@@ -74,7 +81,7 @@
 
 @media screen and (max-width: 768px) {
     .panel-container {
-        .contact-container {
+        .container {
             grid-template-columns: 1fr;
             .panel {
                 min-width: 100%;

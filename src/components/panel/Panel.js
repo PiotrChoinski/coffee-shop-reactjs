@@ -12,7 +12,8 @@ const Panel = () => {
             phoneText, setPhoneText, 
             adressState, setAdressState, 
             adressText, setAdressText,
-            darkTheme, setDarkTheme } = AppContext;
+            darkTheme, setDarkTheme,
+            secondColor, setSecondColor } = AppContext;
 
     const setSliderStateHandler = () => {   
         setSliderState(!sliderState);
@@ -54,6 +55,10 @@ const Panel = () => {
         setDarkTheme(!darkTheme);
     }
 
+    const setSecondColorHandler = (color) => {
+        setSecondColor(color);
+    }
+
     return (
         <div className='panel-container'>
             <h2>General settings</h2>
@@ -64,22 +69,26 @@ const Panel = () => {
                         <li>
                             <p>Second color</p>
                             <div className='colors'>
-                                <div className='color color--default'></div>
-                                <div className='color color--red'></div>
-                                <div className='color color--green'></div>
-                                <div className='color color--orange'></div>
-                                <div className='color color--purple'></div>
+                                <div className='color color--default' onClick={() => setSecondColorHandler('default')}></div>
+                                <div className='color color--red' onClick={() => setSecondColorHandler('red')}></div>
+                                <div className='color color--green' onClick={() => setSecondColorHandler('green')}></div>
+                                <div className='color color--orange' onClick={() => setSecondColorHandler('orange')}></div>
+                                <div className='color color--purple' onClick={() => setSecondColorHandler('purple')}></div>
                             </div>
                         </li>
                     </ul>
                 </div>
-
                 <div className='panel'>
                     <h3>Dark theme</h3>
                     <ul>
                         <li>
                             <p>Dark theme</p>
-                            <input type='checkbox' value={darkTheme} onChange={setDarkThemeHandler} defaultChecked={darkTheme}/>
+                            <label className="toggler-wrapper style-1">
+                                <input type='checkbox' value={darkTheme} onChange={setDarkThemeHandler} defaultChecked={darkTheme}/>
+                                <div className={`theme theme--${secondColor} toggler-slider`}>
+                                    <div className="toggler-knob"></div>
+                                </div>
+                            </label>
                         </li>
                     </ul>
                 </div>
@@ -94,7 +103,12 @@ const Panel = () => {
                     <ul>
                         <li>
                             <p>Show email</p>
-                            <input type='checkbox' value={emailState} onChange={setEmailStateHandler} defaultChecked={emailState}/>
+                            <label className="toggler-wrapper style-1">
+                                <input type='checkbox' value={emailState} onChange={setEmailStateHandler} defaultChecked={emailState}/>
+                                <div className={`theme theme--${secondColor} toggler-slider`}>
+                                    <div className="toggler-knob"></div>
+                                </div>
+                            </label>
                         </li>
                         <li>
                             <p>Your email</p>
@@ -107,7 +121,12 @@ const Panel = () => {
                     <ul>
                         <li>
                             <p>Show phone number</p>
-                            <input type='checkbox' value={phoneState} onChange={setPhoneStateHandler} defaultChecked={phoneState} />
+                            <label className="toggler-wrapper style-1">
+                                <input type='checkbox' value={phoneState} onChange={setPhoneStateHandler} defaultChecked={phoneState} />
+                                <div className={`theme theme--${secondColor} toggler-slider`}>
+                                    <div className="toggler-knob"></div>
+                                </div>
+                            </label>
                         </li>
                         <li>
                             <p>Your phone number</p>
@@ -120,7 +139,12 @@ const Panel = () => {
                     <ul>
                         <li>
                             <p>Show adress</p>
-                            <input type='checkbox' value={adressState} onChange={setAdressStateHandler} defaultChecked={adressState} />
+                            <label className="toggler-wrapper style-1">
+                                <input type='checkbox' value={adressState} onChange={setAdressStateHandler} defaultChecked={adressState} />
+                                <div className={`theme theme--${secondColor} toggler-slider`}>
+                                    <div className="toggler-knob"></div>
+                                </div>
+                            </label>
                         </li>
                         <li>
                             <p>Your adress</p>
@@ -139,7 +163,12 @@ const Panel = () => {
                 <ul>
                     <li>
                         <p>Show</p>
-                        <input type='checkbox' value={sliderState} onChange={setSliderStateHandler} defaultChecked={sliderState} className='purple-theme'/>
+                        <label className="toggler-wrapper style-1">
+                            <input type='checkbox' value={sliderState} onChange={setSliderStateHandler} defaultChecked={sliderState} className='purple-theme'/>
+                            <div className={`theme theme--${secondColor} toggler-slider`}>
+                                <div className="toggler-knob"></div>
+                            </div>
+                        </label>
                     </li>
                     <li>
                         <p>Text</p>

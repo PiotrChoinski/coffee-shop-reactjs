@@ -17,27 +17,25 @@
     background-color: $DarkThemeBgd;
     color: $White;
 }
-.default-theme {
-    background-color: $DefaultTheme;
-    color: $White;
-}
-.red-theme {
-    background-color: $RedTheme;
-    color: $White;
-}
-.green-theme {
-    background-color: $GreenTheme;
-    color: $White;
-}
-.purple-theme {
-    background-color: $PurpleTheme;
-    color: $White;
-    &:checked {
-        background-color: $PurpleTheme;
+input[type="checkbox"]:checked + .theme {
+    &--default {
+        background-color: $DefaultTheme;
         color: $White;
     }
-}
-.orange-theme {
-    background-color: $OrangeTheme;
-    color: $White;
+    &--red {
+        background-color: $RedTheme;
+        color: $White;
+    }
+    &--green {
+        background-color: $GreenTheme;
+        color: $White;
+    }
+    &--purple {
+        background-color: $PurpleTheme;
+        color: $White;    
+    }
+    &--orange {
+        background-color: $OrangeTheme;
+        color: $White;
+    }
 }

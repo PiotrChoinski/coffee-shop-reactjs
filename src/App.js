@@ -19,6 +19,8 @@ const App = () => {
   const [adressState, setAdressState] = useState(true);
   const [adressText, setAdressText] = useState('Example 4/20');
 
+  const [secondColor, setSecondColor] = useState('default');
+
   const [darkTheme, setDarkTheme] = useState(false);
 
   return (
@@ -31,7 +33,8 @@ const App = () => {
                          phoneText, setPhoneText, 
                          adressState, setAdressState, 
                          adressText, setAdressText,
-                         darkTheme, setDarkTheme }}>
+                         darkTheme, setDarkTheme,
+                         secondColor, setSecondColor }}>
         <BrowserRouter>
           <Routes>
             <Route path='*' element={<Website />} />

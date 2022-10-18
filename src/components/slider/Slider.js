@@ -9,7 +9,12 @@ const Slider = (props) => {
     return (
         <>
             { sliderState && <div className='slider-container'>
-                <h1>{sliderText}</h1>
+                <div className='text'>
+                    <h1>{sliderText}</h1>
+                </div>
+                <div className='image'>
+                    <img src='coding.svg' alt='coding' />
+                </div>
             </div>}
         </>
     )

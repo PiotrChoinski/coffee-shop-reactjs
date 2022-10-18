@@ -93,9 +93,7 @@ const Panel = () => {
                     </ul>
                 </div>
             </div>
-
-
-
+            
             <h2>Contact settings</h2>
             <div className='contact-container container'>
                 <div className='panel'>
@@ -112,7 +110,7 @@ const Panel = () => {
                         </li>
                         <li>
                             <p>Your email</p>
-                            <input type='text' defaultValue={emailText} placeholder='Type email...' onChange={(e) => setEmailTextHandler(e)}/>
+                            <input className={`input-text input-text--${secondColor}`} type='text' defaultValue={emailText} placeholder='Type email...' onChange={(e) => setEmailTextHandler(e)}/>
                         </li>
                     </ul>
                 </div>
@@ -130,7 +128,7 @@ const Panel = () => {
                         </li>
                         <li>
                             <p>Your phone number</p>
-                            <input type='text' defaultValue={phoneText} placeholder='Type text...' onChange={(e) => setPhoneTextHandler(e)}/>
+                            <input className={`input-text input-text--${secondColor}`} type='text' defaultValue={phoneText} placeholder='Type text...' onChange={(e) => setPhoneTextHandler(e)}/>
                         </li>
                     </ul>
                 </div>
@@ -148,7 +146,7 @@ const Panel = () => {
                         </li>
                         <li>
                             <p>Your adress</p>
-                            <input type='text' defaultValue={adressText} placeholder='Type text...' onChange={(e) => setAdressTextHandler(e)}/>
+                            <input className={`input-text input-text--${secondColor}`} type='text' defaultValue={adressText} placeholder='Type text...' onChange={(e) => setAdressTextHandler(e)}/>
                         </li>
                     </ul>
                 </div>
@@ -172,7 +170,7 @@ const Panel = () => {
                     </li>
                     <li>
                         <p>Text</p>
-                        <input type='text' defaultValue={sliderText} placeholder='Type text...' onChange={(e) => setSliderTextHandler(e)}/>
+                        <input className={`input-text input-text--${secondColor}`} type='text' defaultValue={sliderText} placeholder='Type text...' onChange={(e) => setSliderTextHandler(e)}/>
                     </li>
                 </ul>
             </div>

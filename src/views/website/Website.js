@@ -6,7 +6,7 @@ import Slider from '../../components/slider';
 const Website = () => {
     return (
         <div>
-            <Header title={'Website'}/>
+            <Header title={'Main Page'}/>
             <Slider />
             <Contact />
             <Footer />

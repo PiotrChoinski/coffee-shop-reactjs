@@ -2,7 +2,7 @@ import './Header.scss';
 import { Link } from 'react-router-dom';
 
 const Header = (props) => {
-    const isAdmin = (props.title).toUpperCase() === 'ADMIN';
+    const isAdmin = (props.title).toUpperCase() === 'ADMIN PANEL';
 
 
     return (

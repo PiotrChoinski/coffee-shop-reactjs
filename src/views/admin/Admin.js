@@ -6,7 +6,7 @@ import Panel from '../../components/panel';
 const Admin = () => {
     return (
         <div>
-            <Header title={'Admin'}/>
+            <Header title={'Admin Panel'}/>
             <Panel />
             <Footer />
         </div>

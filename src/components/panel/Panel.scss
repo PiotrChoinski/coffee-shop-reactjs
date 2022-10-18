@@ -77,6 +77,30 @@
             background-color: $OrangeTheme;
         }
     }
+    .input-text {
+        padding: 8px;
+        border: 2px solid $LightGrey;
+        border-radius: 15PX;
+        outline: none;
+        transition: 0.3s;
+    }
+    .input-text {
+        &--default:focus {
+            border: 2px solid $DefaultTheme;
+        }
+        &--red:focus {
+            border: 2px solid $RedTheme;
+        }
+        &--green:focus {
+            border: 2px solid $GreenTheme;
+        }
+        &--purple:focus {
+            border: 2px solid $PurpleTheme;
+        }
+        &--orange:focus {
+            border: 2px solid $OrangeTheme;
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {

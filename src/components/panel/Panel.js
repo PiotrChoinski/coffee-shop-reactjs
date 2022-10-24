@@ -5,7 +5,7 @@ import { useContext } from 'react';
 const Panel = () => {
     const AppContext = useContext(Context);
     const { productsState, setProductsState, 
-            productsText, setProductsText,
+            productsDiscount, setProductsDiscount,
             emailState, setEmailState, 
             emailText, setEmailText, 
             phoneState, setPhoneState, 
@@ -13,15 +13,17 @@ const Panel = () => {
             adressState, setAdressState, 
             adressText, setAdressText,
             darkTheme, setDarkTheme,
-            secondColor, setSecondColor } = AppContext;
+            secondColor, setSecondColor,
+            refreshPrices } = AppContext;
 
     const setProductsStateHandler = () => {   
         setProductsState(!productsState);
     }
     
-    const setProductsTextHandler = (e) => {
+    const setProductsDiscountHandler = (e) => {
         const text = e.target.value;
-        setProductsText(text);
+        setProductsDiscount(text);
+        refreshPrices();
     }
 
     const setEmailStateHandler = () => {   
@@ -110,7 +112,7 @@ const Panel = () => {
                         </li>
                         <li>
                             <p>Your email</p>
-                            <input className={`input-text input-text--${secondColor}`} type='text' defaultValue={emailText} placeholder='Type email...' onChange={(e) => setEmailTextHandler(e)}/>
+                            <input className={`input-text input-text--${secondColor}`} type='text' defaultValue={emailText} placeholder='Type email...' onChange={(e) => setEmailTextHandler(e)} maxLength='22'/>
                         </li>
                     </ul>
                 </div>
@@ -128,7 +130,7 @@ const Panel = () => {
                         </li>
                         <li>
                             <p>Your phone number</p>
-                            <input className={`input-text input-text--${secondColor}`} type='text' defaultValue={phoneText} placeholder='Type text...' onChange={(e) => setPhoneTextHandler(e)}/>
+                            <input className={`input-text input-text--${secondColor}`} type='text' defaultValue={phoneText} placeholder='Type text...' onChange={(e) => setPhoneTextHandler(e)} maxLength='10'/>
                         </li>
                     </ul>
                 </div>
@@ -146,18 +148,13 @@ const Panel = () => {
                         </li>
                         <li>
                             <p>Your adress</p>
-                            <input className={`input-text input-text--${secondColor}`} type='text' defaultValue={adressText} placeholder='Type text...' onChange={(e) => setAdressTextHandler(e)}/>
+                            <input className={`input-text input-text--${secondColor}`} type='text' defaultValue={adressText} placeholder='Type text...' onChange={(e) => setAdressTextHandler(e)} maxLength='23'/>
                         </li>
                     </ul>
                 </div>
             </div>
-
-
-
-
-
             <div className='panel'>
-                <h2>Slider settings</h2>
+                <h2>Products settings</h2>
                 <ul>
                     <li>
                         <p>Show</p>
@@ -169,8 +166,8 @@ const Panel = () => {
                         </label>
                     </li>
                     <li>
-                        <p>Text</p>
-                        <input className={`input-text input-text--${secondColor}`} type='text' defaultValue={productsText} placeholder='Type text...' onChange={(e) => setProductsTextHandler(e)}/>
+                        <p>Discount %</p>
+                        <input className={`input-text input-text--${secondColor}`} type='number' defaultValue={productsDiscount} placeholder='Type number...' onChange={(e) => setProductsDiscountHandler(e)} min='1' />
                     </li>
                 </ul>
             </div>

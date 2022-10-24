@@ -9,7 +9,7 @@ const App = () => {
   const { Provider } = Context;
   const [products, setProducts] = useState([]);
   const [productsState, setProductsState] = useState(true);
-  const [productsText, setProductsText] = useState('Products');
+  const [productsDiscount, setProductsDiscount] = useState(1);
   
   const [emailState, setEmailState] = useState(true);
   const [emailText, setEmailText] = useState('example@example.com');
@@ -28,15 +28,26 @@ const App = () => {
     const getData = async () => {
       const response = await fetch('./products.json');
       const data = await response.json();
+
       setProducts(data.products);
     }
     getData();
   }, []);
   
+  const refreshPrices = () => {
+    const newProducts = products.map(product => {
+      let newPrice = product.price - (product.price * productsDiscount * 0.1);
+      if (newPrice === 0) newPrice = null;
+      return {...product, newPrice};
+    });
+    console.log(newProducts);
+    setProducts(newProducts);
+  }
+
   return (
     <div className={darkTheme ? 'App dark-theme' : 'App'}>
       <Provider value={{ productsState, setProductsState, 
-                         productsText, setProductsText,
+                         productsDiscount, setProductsDiscount,
                          emailState, setEmailState, 
                          emailText, setEmailText, 
                          phoneState, setPhoneState, 
@@ -45,7 +56,7 @@ const App = () => {
                          adressText, setAdressText,
                          darkTheme, setDarkTheme,
                          secondColor, setSecondColor,
-                         products }}>
+                         products, refreshPrices }}>
         <BrowserRouter>
           <Routes>
             <Route path='*' element={<Website />} />

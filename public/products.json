@@ -2,39 +2,59 @@
     "products":[
        {
           "id":1,
-          "name":"black",
-          "price":12,
-          "img": ""
+          "name":"Cappucchino",
+          "price":23,
+          "img": "cappucchino.png",
+          "newPrice": null
        },
        {
           "id":2,
           "name":"Americano",
-          "price":14,
-          "img": ""
+          "price":20,
+          "img": "americano.png",
+          "newPrice": null
        },
          {
             "id":3,
             "name":"Latte",
-            "price":16,
-            "img": ""
+            "price":18,
+            "img": "latte.png",
+            "newPrice": null
          },
          {
             "id":4,
-            "name":"Cappuccino",
+            "name":"Macchiato",
             "price":18,
-            "img": ""
+            "img": "macchiato.png",
+            "newPrice": null
          },
          {
             "id":5,
             "name":"Mocha",
             "price":20,
-            "img": ""
+            "img": "mocha.png",
+            "newPrice": null
          },
          {
             "id":6,
-            "name":"Espresso",
-            "price":22,
-            "img": ""
+            "name":"Coretto",
+            "price":15,
+            "img": "coretto.png",
+            "newPrice": null
+         },
+         {
+            "id":7,
+            "name":"Ristretto",
+            "price":20,
+            "img": "ristretto.png",
+            "newPrice": null
+         },
+         {
+            "id":8,
+            "name":"Glace",
+            "price":20,
+            "img": "glace.png",
+            "newPrice": null
          }
     ]
  }

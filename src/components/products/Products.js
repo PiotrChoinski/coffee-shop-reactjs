@@ -4,18 +4,19 @@ import { useContext } from 'react';
 
 const Products = (props) => {
     const AppContext = useContext(Context)
-    const { productsState, productsText, products } = AppContext;
+    const { productsState, products, secondColor } = AppContext;
 
     return (
         <>
             { productsState && <div className='products-container'>
             {products.map(product => {
                 return (
-                <div className="offer" key={product.id}>
+                <div className={`offer theme--${secondColor}`} key={product.id}>
                     <img src={product.img} alt={product.name}/>
-                    <h3>{product.name}</h3>
+                    <h2>{product.name}</h2>
                     <div className='price'>
-                        <p>{product.price}zł</p>
+                        <p className={product.newPrice ? 'promo' : ''}>{product.price}</p>
+                        <p>{product.newPrice}zł</p>
                     </div>
                 </div>)
             })};

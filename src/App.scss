@@ -1,5 +1,8 @@
 @import './assets/Colors.scss';
 
+.App {
+    transition: 0.3s;
+}
 .container {
     padding: 10px 20px;
 }

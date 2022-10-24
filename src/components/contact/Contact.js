@@ -6,7 +6,8 @@ const Contact = (props) => {
     const AppContext = useContext(Context)
     const { emailState, emailText,
             phoneState, phoneText,
-            adressState, adressText } = AppContext;
+            adressState, adressText,
+            secondColor } = AppContext;
 
     const call = () => {
         window.open(`tel:${phoneText}`);
@@ -22,15 +23,15 @@ const Contact = (props) => {
             {(emailState || phoneState || adressState) && <div className='contact-container'>
                 <h1>CONTACT US</h1>
                 <div className='contact'>
-                    {phoneState && <div onClick={call}>
+                    {phoneState && <div className={`theme--${secondColor}`} onClick={call}>
                         <img src='phone-call.png' alt='phone-call pic' />
                         <h2>{phoneText}</h2>
                     </div>}
-                    {emailState && <div onClick={mail}>
+                    {emailState && <div className={`theme--${secondColor}`} onClick={mail}>
                         <img src='mail.png' alt='email pic' />
                         <h2>{emailText}</h2>
                     </div>}
-                    {adressState && <div onClick={adress}>
+                    {adressState && <div className={`theme--${secondColor}`} onClick={adress}>
                         <img src='address.png' alt='address pic' />
                         <h2>{adressText}</h2>
                     </div>}

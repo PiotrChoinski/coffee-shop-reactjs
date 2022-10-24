@@ -1,0 +1,40 @@
+{
+    "products":[
+       {
+          "id":1,
+          "name":"black",
+          "price":12,
+          "img": ""
+       },
+       {
+          "id":2,
+          "name":"Americano",
+          "price":14,
+          "img": ""
+       },
+         {
+            "id":3,
+            "name":"Latte",
+            "price":16,
+            "img": ""
+         },
+         {
+            "id":4,
+            "name":"Cappuccino",
+            "price":18,
+            "img": ""
+         },
+         {
+            "id":5,
+            "name":"Mocha",
+            "price":20,
+            "img": ""
+         },
+         {
+            "id":6,
+            "name":"Espresso",
+            "price":22,
+            "img": ""
+         }
+    ]
+ }

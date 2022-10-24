@@ -1,13 +1,15 @@
 import Header from '../../components/header';
 import Contact from '../../components/contact';
 import Footer from '../../components/footer';
-import Slider from '../../components/slider';
+import Products from '../../components/products';
+import Landing from '../../components/landing';
 
 const Website = () => {
     return (
         <div>
             <Header title={'Main Page'}/>
-            <Slider />
+            <Landing />
+            <Products />
             <Contact />
             <Footer />
         </div>

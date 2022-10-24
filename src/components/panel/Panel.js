@@ -4,8 +4,8 @@ import { useContext } from 'react';
 
 const Panel = () => {
     const AppContext = useContext(Context);
-    const { sliderState, setSliderState, 
-            sliderText, setSliderText,
+    const { productsState, setProductsState, 
+            productsText, setProductsText,
             emailState, setEmailState, 
             emailText, setEmailText, 
             phoneState, setPhoneState, 
@@ -15,13 +15,13 @@ const Panel = () => {
             darkTheme, setDarkTheme,
             secondColor, setSecondColor } = AppContext;
 
-    const setSliderStateHandler = () => {   
-        setSliderState(!sliderState);
+    const setProductsStateHandler = () => {   
+        setProductsState(!productsState);
     }
     
-    const setSliderTextHandler = (e) => {
+    const setProductsTextHandler = (e) => {
         const text = e.target.value;
-        setSliderText(text);
+        setProductsText(text);
     }
 
     const setEmailStateHandler = () => {   
@@ -162,7 +162,7 @@ const Panel = () => {
                     <li>
                         <p>Show</p>
                         <label className="toggler-wrapper style-1">
-                            <input type='checkbox' value={sliderState} onChange={setSliderStateHandler} defaultChecked={sliderState} className='purple-theme'/>
+                            <input type='checkbox' value={productsState} onChange={setProductsStateHandler} defaultChecked={productsState} className='purple-theme'/>
                             <div className={`theme theme--${secondColor} toggler-slider`}>
                                 <div className="toggler-knob"></div>
                             </div>
@@ -170,7 +170,7 @@ const Panel = () => {
                     </li>
                     <li>
                         <p>Text</p>
-                        <input className={`input-text input-text--${secondColor}`} type='text' defaultValue={sliderText} placeholder='Type text...' onChange={(e) => setSliderTextHandler(e)}/>
+                        <input className={`input-text input-text--${secondColor}`} type='text' defaultValue={productsText} placeholder='Type text...' onChange={(e) => setProductsTextHandler(e)}/>
                     </li>
                 </ul>
             </div>

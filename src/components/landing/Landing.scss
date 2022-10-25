@@ -17,10 +17,13 @@
         margin-top: 20px;
     }
     p {
-        font-size: 20px;
-        text-align: center;
-        margin-top: 60vh;
+        position: absolute;
+        font-size: 25px;
+        bottom: 20px;
         color: $White;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        -webkit-transform: translate(-50%, -50%);
     }
     .theme {
         &--default {
@@ -37,6 +40,25 @@
         }
         &--orange {
             color: $OrangeTheme;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .landing-container {
+        h1 {
+            font-size: 50px;
+        }
+    }
+}
+@media screen and (max-width: 450px) {
+    .landing-container {
+        h1 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 20px;
+            width: 220px;
         }
     }
 }

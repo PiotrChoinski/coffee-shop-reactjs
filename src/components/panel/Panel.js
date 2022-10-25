@@ -130,7 +130,7 @@ const Panel = () => {
                         </li>
                         <li>
                             <p>Your phone number</p>
-                            <input className={`input-text input-text--${secondColor}`} type='text' defaultValue={phoneText} placeholder='Type text...' onChange={(e) => setPhoneTextHandler(e)} maxLength='10'/>
+                            <input className={`input-text input-text--${secondColor}`} type='number' defaultValue={phoneText} placeholder='Type text...' onChange={(e) => setPhoneTextHandler(e)} maxLength='10' />
                         </li>
                     </ul>
                 </div>

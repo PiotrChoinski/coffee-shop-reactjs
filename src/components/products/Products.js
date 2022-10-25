@@ -1,6 +1,6 @@
-import './Products.scss';
-import Context from '../../context/App.context';
 import { useContext } from 'react';
+import Context from '../../context/App.context';
+import './Products.scss';
 
 const Products = (props) => {
     const AppContext = useContext(Context)

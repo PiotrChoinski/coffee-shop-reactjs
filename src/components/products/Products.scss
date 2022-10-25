@@ -44,7 +44,7 @@
         & .promo {
             text-decoration: line-through rgb(207, 7, 7) 2px;
         &::after {
-            content: "\00a0";
+            content: '\00a0';
             text-decoration: line-through white 2px;
             }
         }

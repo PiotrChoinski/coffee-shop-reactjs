@@ -1,6 +1,6 @@
-import './Contact.scss';
-import Context from './../../context/App.context';
 import { useContext } from 'react';
+import Context from './../../context/App.context';
+import './Contact.scss';
 
 const Contact = (props) => {
     const AppContext = useContext(Context)

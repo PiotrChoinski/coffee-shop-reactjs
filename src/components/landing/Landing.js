@@ -1,6 +1,6 @@
-import './Landing.scss';
-import Context from '../../context/App.context';
 import { useContext } from 'react';
+import Context from '../../context/App.context';
+import './Landing.scss';
 
 const Landing = (props) => {
     const AppContext = useContext(Context)

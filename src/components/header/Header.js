@@ -1,7 +1,7 @@
-import './Header.scss';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Context from './../../context/App.context';
-import { useContext } from 'react';
+import './Header.scss';
 
 const Header = (props) => {
     const isAdmin = (props.title).toUpperCase() === 'ADMIN PANEL';

@@ -1,6 +1,6 @@
-import './Panel.scss';
-import Context from './../../context/App.context';
 import { useContext } from 'react';
+import Context from './../../context/App.context';
+import './Panel.scss';
 
 const Panel = () => {
     const AppContext = useContext(Context);
@@ -85,10 +85,10 @@ const Panel = () => {
                     <ul>
                         <li>
                             <p>Dark theme</p>
-                            <label className="toggler-wrapper style-1">
+                            <label className='toggler-wrapper style-1'>
                                 <input type='checkbox' value={darkTheme} onChange={setDarkThemeHandler} defaultChecked={darkTheme}/>
                                 <div className={`theme theme--${secondColor} toggler-slider`}>
-                                    <div className="toggler-knob"></div>
+                                    <div className='toggler-knob'></div>
                                 </div>
                             </label>
                         </li>
@@ -103,10 +103,10 @@ const Panel = () => {
                     <ul>
                         <li>
                             <p>Show email</p>
-                            <label className="toggler-wrapper style-1">
+                            <label className='toggler-wrapper style-1'>
                                 <input type='checkbox' value={emailState} onChange={setEmailStateHandler} defaultChecked={emailState}/>
                                 <div className={`theme theme--${secondColor} toggler-slider`}>
-                                    <div className="toggler-knob"></div>
+                                    <div className='toggler-knob'></div>
                                 </div>
                             </label>
                         </li>
@@ -121,10 +121,10 @@ const Panel = () => {
                     <ul>
                         <li>
                             <p>Show phone number</p>
-                            <label className="toggler-wrapper style-1">
+                            <label className='toggler-wrapper style-1'>
                                 <input type='checkbox' value={phoneState} onChange={setPhoneStateHandler} defaultChecked={phoneState} />
                                 <div className={`theme theme--${secondColor} toggler-slider`}>
-                                    <div className="toggler-knob"></div>
+                                    <div className='toggler-knob'></div>
                                 </div>
                             </label>
                         </li>
@@ -139,10 +139,10 @@ const Panel = () => {
                     <ul>
                         <li>
                             <p>Show adress</p>
-                            <label className="toggler-wrapper style-1">
+                            <label className='toggler-wrapper style-1'>
                                 <input type='checkbox' value={adressState} onChange={setAdressStateHandler} defaultChecked={adressState} />
                                 <div className={`theme theme--${secondColor} toggler-slider`}>
-                                    <div className="toggler-knob"></div>
+                                    <div className='toggler-knob'></div>
                                 </div>
                             </label>
                         </li>
@@ -158,10 +158,10 @@ const Panel = () => {
                 <ul>
                     <li>
                         <p>Show</p>
-                        <label className="toggler-wrapper style-1">
+                        <label className='toggler-wrapper style-1'>
                             <input type='checkbox' value={productsState} onChange={setProductsStateHandler} defaultChecked={productsState} className='purple-theme'/>
                             <div className={`theme theme--${secondColor} toggler-slider`}>
-                                <div className="toggler-knob"></div>
+                                <div className='toggler-knob'></div>
                             </div>
                         </label>
                     </li>

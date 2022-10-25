@@ -19,7 +19,7 @@
     background-color: $DarkThemeBgd;
     color: $White;
 }
-input[type="checkbox"]:checked + .theme {
+input[type='checkbox']:checked + .theme {
     &--default {
         background-color: $DefaultTheme;
         color: $White;

@@ -20,7 +20,7 @@
     p {
         margin-right: 10px;
     }
-    .toggler-wrapper input[type="checkbox"] {
+    .toggler-wrapper input[type='checkbox'] {
         display: none;
     } 
     .toggler-wrapper .toggler-slider {
@@ -38,7 +38,7 @@
         -webkit-transition: all 300ms ease;
         transition: all 300ms ease;
     }      
-    .toggler-wrapper.style-1 input[type="checkbox"]:checked+.toggler-slider .toggler-knob {
+    .toggler-wrapper.style-1 input[type='checkbox']:checked+.toggler-slider .toggler-knob {
         left: calc(100% - 19px - 3px);
     }
     .toggler-wrapper.style-1 .toggler-knob {

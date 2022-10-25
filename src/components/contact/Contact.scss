@@ -35,41 +35,41 @@
                 font-size: 30px;
             }
         }
-    }
-    .theme {
-        &--default {
-            border-bottom: 2px solid $DefaultTheme;
-            border-right: 2px solid $DefaultTheme;
-            &:hover {
-                border: 2px solid $DefaultTheme;
+        .theme {
+            &--default {
+                border-bottom: 2px solid $DefaultTheme;
+                border-right: 2px solid $DefaultTheme;
+                &:hover {
+                    border: 2px solid $DefaultTheme;
+                }
             }
-        }
-        &--red {
-            border-bottom: 2px solid $RedTheme;
-            border-right: 2px solid $RedTheme;
-            &:hover {
-                border: 2px solid $RedTheme;
+            &--red {
+                border-bottom: 2px solid $RedTheme;
+                border-right: 2px solid $RedTheme;
+                &:hover {
+                    border: 2px solid $RedTheme;
+                }
             }
-        }
-        &--green {
-            border-bottom: 2px solid $GreenTheme;
-            border-right: 2px solid $GreenTheme;
-            &:hover {
-                border: 2px solid $GreenTheme;
+            &--green {
+                border-bottom: 2px solid $GreenTheme;
+                border-right: 2px solid $GreenTheme;
+                &:hover {
+                    border: 2px solid $GreenTheme;
+                }
             }
-        }
-        &--purple {
-            border-bottom: 2px solid $PurpleTheme;
-            border-right: 2px solid $PurpleTheme;
-            &:hover {
-                border: 2px solid $PurpleTheme;
+            &--purple {
+                border-bottom: 2px solid $PurpleTheme;
+                border-right: 2px solid $PurpleTheme;
+                &:hover {
+                    border: 2px solid $PurpleTheme;
+                }
             }
-        }
-        &--orange {
-            border-bottom: 2px solid $OrangeTheme;
-            border-right: 2px solid $OrangeTheme;
-            &:hover {
-                border: 2px solid $OrangeTheme;
+            &--orange {
+                border-bottom: 2px solid $OrangeTheme;
+                border-right: 2px solid $OrangeTheme;
+                &:hover {
+                    border: 2px solid $OrangeTheme;
+                }
             }
         }
     }
